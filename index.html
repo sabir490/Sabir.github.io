@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NewsHub — Daily Articles</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Daily news & articles (static)" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="logo">NewsHub</div>
+      <nav class="main-nav">
+        <a href="#" data-cat="All">Home</a>
+        <a href="#" data-cat="India">India</a>
+        <a href="#" data-cat="World">World</a>
+        <a href="#" data-cat="Sports">Sports</a>
+        <a href="#" data-cat="Tech">Tech</a>
+        <a href="#" data-cat="Lifestyle">Lifestyle</a>
+        <a href="#" data-cat="Opinion">Opinion</a>
+      </nav>
+      <div class="header-actions">
+        <input id="searchInput" type="search" placeholder="Search articles..."/>
+        <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="adminBtn">Admin</button>
+      </div>
+    </div>
+    <div class="breaking">
+      <span>Breaking:</span>
+      <div id="ticker" class="ticker">Loading breaking news...</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="hero"></section>
+    <section class="content-grid">
+      <div class="main-col" id="mainCol"></div>
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Trending</h3>
+          <ul id="trendingList"></ul>
+        </div>
+        <div class="widget">
+          <h3>Admin</h3>
+          <p><small>Use Admin to add/edit articles locally.</small></p>
+          <button id="exportBtn">Export JSON</button>
+          <input type="file" id="importFile" accept="application/json" />
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="adminModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="closeAdmin">✕</button>
+      <h2>Admin Panel</h2>
+      <form id="articleForm">
+        <input type="hidden" id="articleId" />
+        <label>Title<input id="title" required/></label>
+        <label>Author<input id="author" required/></label>
+        <label>Date<input id="date" type="date" required/></label>
+        <label>Category<select id="category">
+          <option>India</option><option>World</option><option>Sports</option>
+          <option>Tech</option><option>Lifestyle</option><option>Opinion</option>
+        </select></label>
+        <label>Cover Image URL<input id="cover" required/></label>
+        <label>Excerpt<textarea id="excerpt" rows="2"></textarea></label>
+        <label>Content (HTML allowed)<textarea id="content" rows="6" required></textarea></label>
+        <div class="admin-actions">
+          <button type="submit">Save Article</button>
+          <button type="button" id="deleteArticle" class="danger">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
