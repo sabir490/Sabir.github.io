@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "India’s Economy Shows Signs of Recovery",
+    "author": "R. Sharma",
+    "date": "2025-11-28",
+    "category": "India",
+    "cover": "https://via.placeholder.com/1000x560?text=India+Economy",
+    "excerpt": "Latest indicators show gradual recovery in several sectors...",
+    "content": "<p>Detailed report about the improving indicators in agriculture and manufacturing. This is a sample article content to show layout and styling.</p>"
+  },
+  {
+    "id": "2",
+    "title": "Global Climate Summit: Key Takeaways",
+    "author": "A. Gupta",
+    "date": "2025-11-26",
+    "category": "World",
+    "cover": "https://via.placeholder.com/1000x560?text=Climate+Summit",
+    "excerpt": "World leaders discussed urgent climate measures at the summit...",
+    "content": "<p>Summary of agreements, pledges and action points from the summit.</p>"
+  },
+  {
+    "id": "3",
+    "title": "Mumbai Beats Chennai in Thrilling Match",
+    "author": "S. Khan",
+    "date": "2025-11-25",
+    "category": "Sports",
+    "cover": "https://via.placeholder.com/1000x560?text=Cricket+Match",
+    "excerpt": "A last-over thriller ended with Mumbai clinching victory...",
+    "content": "<p>Match report, player of the match and post-match reactions.</p>"
+  }
+]
